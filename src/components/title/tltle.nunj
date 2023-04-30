@@ -1,0 +1,5 @@
+{% macro title(props) %}
+<h4 class="title {{props.classNames}}">
+	{{ props.children }}
+</h4>
+{% endmacro %}

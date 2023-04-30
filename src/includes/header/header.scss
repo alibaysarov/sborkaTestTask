@@ -1,0 +1,56 @@
+.header {
+	padding: 26px 10px;
+	background: $white;
+	border:none;
+	border-bottom: 1px solid $grey2;
+	.logo-icon{
+		width: 89px;
+		height: 23px;
+	}
+	&__content{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__right{
+		display: flex;
+		gap:26px;
+	}
+	&__button{
+		border:0px;
+		outline: none;
+		background: transparent;
+		cursor: pointer;
+		.search-icon{
+			width: 24px;
+			height: 24px;
+		}
+		&_cart{
+			position: relative;
+			.cart-icon{
+				width: 24px;
+				height: 24px;
+			}
+		}
+		&_burger{
+			display: none;
+			.burger-icon{
+				width: 24px;
+				height: 24px;
+			}
+			&.show{
+				display: block;
+			}
+		}
+	}
+	&__count{
+		position: absolute;
+		background-color: $blue;
+		color: $white;
+		right: -5px;
+		top: -2px;
+		font-size: 10px;
+		z-index: 12;
+		padding: 2px 4px;
+		border-radius: 10px;
+	}
+}

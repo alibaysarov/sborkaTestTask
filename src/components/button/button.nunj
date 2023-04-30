@@ -1,0 +1,6 @@
+{% macro button(props) %}
+<button class="button-{% if props.type=='stroke' %}stroke{% else%}fill{% endif %}">
+	{{ props.children }}
+	
+</button>
+{% endmacro %}

@@ -1,0 +1,72 @@
+{% from "../../components/title/tltle.nunj" import title %} {% from
+"../../components/icon/icon.nunj" import icon %} {% from "../../components/cartItem/cartItem.nunj"
+import cartItem %} {% from "../../components/button/button.nunj" import button %}
+<div class="sideBar">
+	<div class="sideBar__drawer drawer">
+		<div class="drawer__inner">
+			{{
+				icon({
+					iconName: 'menu-close',
+					className: 'closeMenu-icon'
+				})
+			}}
+			<div class="drawer__title">
+				{{
+					title({
+						children: 'My basket'
+					})
+				}}
+			</div>
+			<div class="drawer__content">
+				{% for item in cartItems %}
+				{{
+					cartItem({
+						name: item.name,
+						img: item.img,
+						price: item.price,
+						id: item.id
+					})
+				}}
+				{% endfor%}
+			</div>
+		</div>
+	</div>
+	<div class="sideBar__promo promo">
+		<div class="promo__inner">
+			<div class="promo__title">
+				{{
+					title({
+						children: 'Promo code'
+					})
+				}}
+			</div>
+			<div class="promo__field">
+				<input type="text" placeholder="Placeholder Text" class="promo__input" />
+				{{
+					button({
+						children: 'Apply',
+						className: 'fill'
+					})
+				}}
+			</div>
+		</div>
+	</div>
+	<div class="sideBar__total total">
+		<div class="total__row">
+			<p class="total__text">Subtotal</p>
+			<p class="total__text js-subtotal">$ 1050</p>
+		</div>
+		<div class="total__row">
+			<p class="total__text">Tax</p>
+			<p class="total__text js-tax">$100</p>
+		</div>
+		<div class="total__row">
+			<p class="total__text">Shipping</p>
+			<p class="total__text js-shipping">$150</p>
+		</div>
+		<div class="total__row">
+			<strong class="total__text">Total</strong>
+			<strong class="total__text js-total">$1 300</strong>
+		</div>
+	</div>
+</div>

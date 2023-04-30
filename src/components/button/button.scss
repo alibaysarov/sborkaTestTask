@@ -1,0 +1,48 @@
+.button {
+	font-family: "Roboto",sans-serif;
+	line-height: calc(24px / 14px);
+	&-fill{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $blue;
+		color: $white;
+		height: 54px;
+		font-weight: 400;
+		cursor: pointer;
+		font-size: 14px;
+		letter-spacing: -0.5px;
+		padding: 8px 30px;
+		border:0px;
+		border-radius:3px;
+		@include trns();
+		&:hover {
+			background-color: darken($color: $blue, $amount: 5);
+			color: $white;
+		}
+	
+		&:active {
+			background-color: darken($color: $blue, $amount: 5);
+			transform: scale(.95);
+		}
+	}
+	&-stroke{
+		color: $black;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: calc(24px / 14px);
+		padding: 8px 30px;
+		border-radius:5px;
+		border:0px;
+		border-radius:3px;
+		@include trns();
+		cursor: pointer;
+		background-color: transparent;
+		border:1px solid $grey2;
+		&:active {
+			transform: scale(.95);
+		}
+	}
+	
+
+}

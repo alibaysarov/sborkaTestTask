@@ -1,0 +1,42 @@
+{% from "../icon/icon.nunj" import icon %} {% macro cartItem(props)%}
+<div class="drawer__item" data-number="{{props.id}}">
+	<div class="drawer__img">
+		<img src="{{ props.img }}" width="99" height="100" alt="" />
+	</div>
+	<div class="drawer__info">
+		<p class="drawer__name">{{ props.name }}</p>
+		<div class="drawer__priceBlock">
+			<div class="drawer__count">
+				<button class="drawer__button js-decrement">
+					{{
+						icon({
+							iconName: 'minus',
+							className: '',
+							attr: 'style="width:20px; height:20px;"'
+						})
+					}}
+				</button>
+				<span class="drawer__quantity">1</span>
+				<button class="drawer__button js-increment">
+					{{
+						icon({
+							iconName: 'plus',
+							className: '',
+							attr: 'style="width:20px; height:20px;"'
+						})
+					}}
+				</button>
+			</div>
+			<div class="drawer__price">$ <span class="drawer__priceVal">{{ props.price }}</span></div>
+		</div>
+	</div>
+	{{
+		icon({
+			iconName: 'Close',
+			className: 'drawer__closeIcon',
+			attr: 'style="width:18px; height:18px;"'
+		})
+	}}
+</div>
+
+{% endmacro%}

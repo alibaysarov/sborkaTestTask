@@ -1,0 +1,50 @@
+{
+	"menuItems": [
+		{
+			"name": "Menu Item 1",
+			"path": "#"
+		},
+		{
+			"name": "Menu Item 2",
+			"path": "#"
+		},
+		{
+			"name": "Menu Item 3",
+			"path": "#"
+		}
+	],
+	"someData": [
+		{
+			"title": "Item 1",
+			"text": "Desc 1"
+		},
+		{
+			"title": "Item 2",
+			"text": "Desc 2"
+		}
+	],
+	"items":[
+		{
+			"name":"ALi",
+			"age":"21"
+		},
+		{
+			"name":"John",
+			"age":"22"
+		}
+	],
+	"cartItems":[
+		{
+			"name":"Amet minim mollit non deserunt ullamco est sit",
+			"img":"./assets/images/Jacket.png",
+			"price":"525",
+			"id":1
+		},
+		{
+			"name":"Amet minim mollit non",
+			"img":"./assets/images/Sneakers.png",
+			"price":"600",
+			"id":2
+		}
+	]
+}

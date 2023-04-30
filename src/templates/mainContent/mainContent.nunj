@@ -1,0 +1,128 @@
+{% from "../../components/title/tltle.nunj" import title %}
+{% from "../../components/button/button.nunj" import button %}
+<div class="main__content mainContent">
+	<div class="mainContent__timeline timeline">
+		<div class="timeline__item">
+			<div class="timeline__inner">
+				<div class="timeline__number">1</div>
+				<div class="timeline__text">Account</div>
+			</div>
+		</div>
+		<div class="timeline__item">
+			<div class="timeline__inner">
+				<div class="timeline__number">2</div>
+				<div class="timeline__text">Shipping</div>
+			</div>
+		</div>
+		<div class="timeline__item timeline__item_last">
+			<div class="timeline__inner">
+				<div class="timeline__number current">3</div>
+				<div class="timeline__text">Billing</div>
+			</div>
+			<div class="timeline__inner timeline__inner_last">
+				<div class="timeline__number next">4</div>
+				<div class="timeline__text">Review</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainContent__billing billing">
+		<div class="billing__title">
+			{{
+				title({
+					children: 'Billing Information'
+				})
+			}}
+		</div>
+		<div class="billing__paymentSelect paymentSelect">
+			<div class="paymentSelect__item">
+				<div class="paymentSelect__radioBtn radioBtn">
+					<input checked type="radio" value="1" name="a" class="radioBtn__hidden" />
+					<span></span>
+				</div>
+				<p>Pay with Credit Card</p>
+			</div>
+			<div class="paymentSelect__item">
+				<div class="paymentSelect__radioBtn radioBtn">
+					<input type="radio" value="1" name="a" class="radioBtn__hidden" />
+					<span></span>
+				</div>
+				<img src="./assets/images/PayPal.svg" alt="PayPal" width="85" height="23" />
+			</div>
+		</div>
+		<div class="billing__form billingForm">
+			<div class="billingForm__item">
+				<label class="billingForm__label">Name on card</label>
+				<div class="billingForm__field">
+					<input
+						placeholder="Placeholder Text"
+						type="text"
+						class="billingForm__input js-cardName"
+					/>
+				</div>
+			</div>
+			<div class="billingForm__item">
+				<label class="billingForm__label">Name on card</label>
+				<div class="billingForm__layout cardNumber">
+					<input type="text" maxlength="4" class="billingForm__input billingForm__input_sm" />
+					<input type="text" maxlength="4" class="billingForm__input billingForm__input_sm" />
+					<input type="text" maxlength="4" class="billingForm__input billingForm__input_sm" />
+					<input type="text" maxlength="4" class="billingForm__input billingForm__input_sm" />
+				</div>
+			</div>
+			<div class="billingForm__row">
+				<div class="billingForm__item">
+					<label class="billingForm__label">Expire date</label>
+					<input
+						type="text"
+						maxlength="4"
+						class="billingForm__input billingForm__input_sm js-exp-date"
+					/>
+				</div>
+				<div class="billingForm__item">
+					<div class="billingForm__top">
+						<label class="billingForm__label">CVV code</label>
+						<span class="billingForm__question">?</span>
+					</div>
+					<input
+						type="text"
+						maxlength="3"
+						class="billingForm__input billingForm__input_sm js-cvvCode"
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="billing__checkboxes">
+			<div class="billing__checkbox checkbox">
+				<div class="checkbox__inner">
+					<input type="checkbox" checked />
+					<span></span>
+				</div>
+				<p class="checkbox__text">Save information of this credit card</p>
+			</div>
+			<div class="billing__checkbox checkbox">
+				<div class="checkbox__inner">
+					<input type="checkbox" />
+					<span></span>
+				</div>
+				<p class="checkbox__text">
+					I accept the <a href="#">terms and conditions</a> and the Privacy Policies
+				</p>
+			</div>
+		</div>
+		<div class="billing__buttons">
+			{{
+				button({
+					children:'Back',
+					type:'stroke'
+				})
+			}}
+			{{
+				button({
+					children:'Check Out',
+					type:'fill'
+				})
+			}}
+		</div>
+	</div>
+	
+</div>
